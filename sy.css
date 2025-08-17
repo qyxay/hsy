@@ -1,0 +1,42 @@
+body{
+    background-color: #fff7f2;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+}
+
+header{
+    background-color: #804e2f;
+    color: #fff;
+    border-radius: 10px;
+    margin: 2vw;
+    max-height:10vh;
+    text-align: center; /*文字居中*/
+}
+
+header h3{
+    position: relative;
+    bottom: 2vh; /* 向上移动 */
+}
+
+
+main{
+    background-color: #e6c0a7;
+    padding-block: 1vh;
+    padding-inline: 2vw;
+    margin: 2vw;
+    border-radius: 10px;
+    line-height: 1.2; /* 增加行距，可根据需要调整数值 */
+}
+
+main a{
+    color: #804e2f;
+    text-decoration: none;
+}
+
+footer{
+    background-color: #150c07;
+    min-height: 6vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
