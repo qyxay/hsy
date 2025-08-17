@@ -1,123 +1,140 @@
 * {
-    padding:0;
-    margin:0
-}
-.标题{
-    background-color:bisque;
-    display:flex;
-
-    /*使其居中*/
-    flex-direction: column;
-    align-items:center;
-
-    border-radius:10px;
-    /* 外部边距简写方式：上 右 下 左 */
-    margin:10px 20px 20px 20px;
-}
-
-.正文{
-    background-color:#e9dcc9;
-    display:flex;
-
-    /*使其居中*/
-    flex-direction: column;
-    align-items:center;
-
-    border-radius:10px;
-    /* 外部边距简写方式：上 右 下 左 */
-    margin:10px 20px 20px 20px;
-
-
-}
-.正文 p{
-    font-size:15px;
-
-    /*文本左右边距*/
-    padding-inline:10px;
-    /*文本上下边距*/
-    padding-block:10px;
-}
-.按钮{
-    background-color: #e9dcc9;
-    height:60px;
-
-    border-radius:10px;
-    /* 外部边距简写方式：上 右 下 左 */
-    margin:10px 20px 20px 20px;
-
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center;     /* 垂直居中 */
-
-}
-.按钮 a{
-    color:black;
-    display:flex;
-
-    font-size:18px;
-
-    border: 2px solid #503e2a;
-    border-radius: 5px;
-    height:30px;
-    width:45px;
-
-    /*使其居中*/
-    flex-direction: column;
-    justify-content: center; /* 水平居中 */
-    align-items: center;     /* 垂直居中 */
-
-    text-decoration: none;
-    /* 默认无下划线 */
-}
-.按钮 a:hover{
-    text-decoration: underline;
-}
-
-
-
-
-.按钮2{
-    background-color: #e9dcc9;
-    height:60px;
-
-    border-radius:10px;
-    /* 外部边距简写方式：上 右 下 左 */
-    margin:10px 20px 20px 20px;
-
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center;     /* 垂直居中 */
-}
-.按钮2 a{
-    color:black;
-    display:flex;
-
-    font-size:18px;
-
-    border: 2px solid #503e2a;
-    border-radius: 5px;
-    height:30px;
-    width:80px;
-
-    /*使其居中*/
-    flex-direction: column;
-    justify-content: center; /* 水平居中 */
-    align-items: center;     /* 垂直居中 */
-
-    text-decoration: none;
-    /* 默认无下划线 */
-}
-.按钮2 a:hover{
-    text-decoration: underline;
-}
-
-
-footer{
-    background-color:#000000;
-    color:#B7B7B7;
-    height: 60px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:14px;
-}
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .标题 {
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-size: contain;
+            border-radius: 10px;
+            margin: 10px 20px 20px 20px;
+            padding: 15px;
+        }
+        
+        .正文 {
+            background-color: #e9dcc9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            margin: 10px 20px 20px 20px;
+            flex: 1; /* 让正文区域自动填充剩余空间 */
+        }
+        
+        .正文 p {
+            font-size: 15px;
+            padding-inline: 10px;
+            padding-block: 10px;
+            max-width: 800px;
+            width: 100%;
+            line-height: 1.8;
+        }
+        
+        .按钮 {
+            background-color: #e9dcc9;
+            height: 60px;
+            border-radius: 10px;
+            margin: 10px 20px 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .按钮 a {
+            color: black;
+            display: flex;
+            font-size: 18px;
+            border: 2px solid #503e2a;
+            border-radius: 5px;
+            height: 30px;
+            width: 45px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .按钮 a:hover {
+            text-decoration: underline;
+            background-color: rgba(80, 62, 42, 0.1);
+        }
+        
+        .按钮2 {
+            background-color: #e9dcc9;
+            height: 60px;
+            border-radius: 10px;
+            margin: 10px 20px 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .按钮2 a {
+            color: black;
+            display: flex;
+            font-size: 18px;
+            border: 2px solid #503e2a;
+            border-radius: 5px;
+            height: 30px;
+            width: 80px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .按钮2 a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: #000000;
+            color: #B7B7B7;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            margin-top: auto; /* 推到页面底部 */
+            width: 100%;
+        }
+        
+        /* 响应式设计 - 针对手机屏幕 */
+        @media (max-width: 768px) {
+            .标题, .正文, .按钮, .按钮2 {
+                margin: 10px 5px;
+            }
+            
+            .正文 p {
+                padding-inline: 15px;
+                font-size: 16px;
+                max-width: calc(100% - 30px);
+            }
+            
+            .标题 h1 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* 针对更小的手机屏幕 */
+        @media (max-width: 480px) {
+            .正文 p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+            
+            .标题 h1 {
+                font-size: 1.3rem;
+            }
+        }
